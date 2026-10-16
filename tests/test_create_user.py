@@ -38,18 +38,16 @@ class TestCreateUser:
         5. Проверяем тело ответа.
         '''
     )
-    def test_create_duplicate_user(self, user_cleanup):
-        user_data = UserData.generate_user_data()
-        response = UserMethods.create_user(user_data)
-
-        token = response.json()["accessToken"]
-        user_cleanup["token"] = token
+    def test_create_duplicate_user(self, user):
+        user_data = {
+            "email": user["email"],
+            "password": user["password"],
+            "name": user["name"]
+        }
 
         duplicate_response = UserMethods.create_user(user_data)
 
-        status_code, success, message = (
-            UserData.duplicate_user_error_data
-        )
+        status_code, success, message = UserData.duplicate_user_error_data
 
         assert duplicate_response.status_code == status_code
         assert duplicate_response.json()["success"] is success

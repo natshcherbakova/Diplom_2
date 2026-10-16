@@ -21,15 +21,9 @@ class TestCreateOrder:
         8. Проверяем тело ответа.
         '''
     )
-    def test_create_order_with_auth(self, user_cleanup):
-        user_data = UserData.generate_user_data()
-        response = UserMethods.create_user(user_data)
-
-        token = response.json()["accessToken"]
-        user_cleanup["token"] = token
-
+    def test_create_order_with_auth(self, user):
         headers = {
-            "Authorization": token,
+            "Authorization": user["token"],
             "Content-type": "application/json"
         }
 
