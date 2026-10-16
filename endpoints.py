@@ -1,5 +1,6 @@
 # API ручки
 class Endpoints:
+    
     # создание пользователя
     create_user = "/api/auth/register"
 

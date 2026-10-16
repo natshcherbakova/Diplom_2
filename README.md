@@ -42,9 +42,9 @@
   - `test_create_order.py` — класс `TestCreateOrder` с тестами создания заказа с авторизацией, без авторизации, без ингредиентов и с невалидным хэшем ингредиента
   - `test_get_user_orders.py` — класс `TestGetUserOrders` с тестами получения заказов авторизованного и неавторизованного пользователя
 
-## Запуск автотестов
+### Запуск автотестов
 
-**Установка зависимостей**
+Установка зависимостей:
 
 ```bash
 pip install -r requirements.txt
@@ -67,3 +67,7 @@ allure serve allure_results
 ```bash
 allure generate allure_results -o allure-report --clean
 ```
+
+**Результат**
+15 passed
+TOTAL: 100%

@@ -116,8 +116,8 @@ class IngredientsData:
     # корректные данные ингредиентов
     correct_ingredients_data = {
         "ingredients": [
-            "691577430cc94f001a65b859",
-            "691577430cc94f001a65b862",
-            "691577430cc94f001a65b863"
+            "6acef97852135b001b21a32c",
+            "6acef97852135b001b21a32d",
+            "6acef97852135b001b21a331"
         ]
     }
